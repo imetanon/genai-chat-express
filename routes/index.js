@@ -7,11 +7,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res, next) {
-    res.render('index', {
-        title: 'CGS - Generative AI Chatbot',
-        isAuthenticated: req.session.isAuthenticated,
-        username: req.session.account?.username,
-    });
+    if (req.session.isAuthenticated) {
+        // User is authenticated, render the page with user information
+        res.render('index', {
+            title: 'CGS - Generative AI Chatbot',
+            isAuthenticated: req.session.isAuthenticated,
+            username: req.session.account?.username,
+        });
+    } else {
+        // User is not authenticated, redirect to the authentication page
+        res.redirect('/auth/signin'); // Adjust the path to your authentication route
+    }
 });
 
 module.exports = router;
