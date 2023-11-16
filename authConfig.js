@@ -30,7 +30,7 @@ const msalConfig = {
 const REDIRECT_URI = process.env.REDIRECT_URI;
 const POST_LOGOUT_REDIRECT_URI = process.env.POST_LOGOUT_REDIRECT_URI;
 const GRAPH_ME_ENDPOINT = process.env.GRAPH_API_ENDPOINT + "v1.0/me";
-const DATAOCEAN_EMP_ENDPOINT = process.env.DATAOCEAN_API_ENDPOINT + "api/broker/json/c139dff4-a93e-4d1b-97a7-80b5d5063cec";
+const DATAOCEAN_EMP_ENDPOINT = process.env.DATAOCEAN_API_ENDPOINT + "api/broker/json/dade6a4c-3a19-4d57-9a04-0d533dd1c4cd";
 const DATAOCEAN_EMP_TOKEN = process.env.DATAOCEAN_EMP_TOKEN
 
 module.exports = {
