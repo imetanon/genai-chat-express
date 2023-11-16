@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  {{{body}}}
+  <script src="http://webchat-sdk.amitysolutions.com/sdk/ams_sdk.js"></script>
+  <script>
+    ams_sdk.chat.load({
+
+      // Channel ID generated from step above
+      channelId: "YOUR_CHANNEL_ID",
+
+      // Display mode - "full_screen" or "bubble"
+      mode: "bubble",
+
+      // Optional display name for user
+      displayName: "John Doe",
+
+      // Optional rich menu configuration, see detail below
+      richmenuSetting: {
+      },
+
+      // Bubble setting when used in "bubble" mode
+      bubble: {
+      }
+    });
+  </script>
+</body>
+
 </html>
