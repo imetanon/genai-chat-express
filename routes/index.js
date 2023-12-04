@@ -13,6 +13,8 @@ router.get('/', function (req, res, next) {
             title: 'CGS - Generative AI Chatbot',
             isAuthenticated: req.session.isAuthenticated,
             username: req.session.account?.username,
+            name: req.session.account?.name,
+            timestamp: Date.now() 
         });
     } else {
         // User is not authenticated, redirect to the authentication page

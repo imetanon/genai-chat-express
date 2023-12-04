@@ -8,18 +8,29 @@
 
 <body>
   {{{body}}}
-  <script src="https://webchat-sdk.amitysolutions.com/sdk/ams_sdk.js"></script>
+  <script src="https://webchat-sdk.amitysolutions.com/sdk/ams_sdk.js?ts={{timestamp}}"></script>
   <script>
     ams_sdk.chat.load({
 
       // Channel ID generated from step above
+<<<<<<< HEAD
       channelId: "Change to xxx",
+=======
+      channelId: "Jd786StPZ2FZWcKfC",
+>>>>>>> 0838e08 (update sdk part prep. for new release)
 
       // Display mode - "full_screen" or "bubble"
       mode: "bubble",
 
+      botName: "Mind",
+
+      botImage: "https://bn-sme-production-ap-southeast-1.s3.amazonaws.com/60dc04b2502b3c277d86c0fe/58292c1b-eebd-414a-974c-9372304585d0.png",
+
+      token: "{{username}}",
+
       // Optional display name for user
-      displayName: "John Doe",
+      displayName: "{{name}}", 
+
 
       // Optional rich menu configuration, see detail below
       richmenuSetting: {
@@ -27,6 +38,22 @@
 
       // Bubble setting when used in "bubble" mode
       bubble: {
+        button: {
+          style: "background: #00bdf8",
+          
+        },
+
+        frameContainer: {
+          //width: "300px", // width of frame container
+          //height: "300px", // height of frame container
+          header: {
+            title: {
+              text: 'Mind - CGS GenAI',
+              style: 'color: white' 
+            },
+            style: 'background: #00bdf8'
+          }
+        },
       }
     });
   </script>
