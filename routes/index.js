@@ -22,4 +22,11 @@ router.get('/', function (req, res, next) {
     }
 });
 
+router.get('/amity', function (req, res, next) {
+    res.render('amity', {
+        title: 'CGS - Generative AI Chatbot',
+        username: 'AMITY@SCG.COM'
+    })
+});
+
 module.exports = router;
